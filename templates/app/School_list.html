@@ -9,7 +9,9 @@
 
 {% for school in schools %}
 
-<h3 style="color: red;">{{school.name}}</h3>
+   <a href="{{school.pk}}">
+    <h3 style="color: red;">{{school.name}}</h3>
+   </a>
 
 {% endfor %}
 

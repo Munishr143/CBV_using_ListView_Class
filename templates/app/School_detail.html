@@ -13,6 +13,18 @@
 
 <h3>Location of the school is {{sclobject.location}}</h3>
 
+<h1>Details of School Object</h1>
+
+{% for student in sclobject.students.all %}
+<h5>Student Name is {{student.sname}}</h5>
+<h5>Student age is {{student.sage}}</h5>
+
+{% endfor %}
+
+<a href="{% url 'SchoolUpdate' pk=sclobject.pk %}" class="btn btn-danger">Update</a>
+
+<a href="{% url 'SchoolDelete' pk=sclobject.pk %}" class="btn btn-danger">Delete</a>
+
 
 
 {% endblock %}
